@@ -1,0 +1,15 @@
+{
+  "name": "belsekolah",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "renal eki riyanto",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "electron": "^20.0.3"
+  }
+}
