@@ -15,6 +15,7 @@ app.on('ready', () => {
             contextIsolation: false,
         }
     });
+    main.maximize();
 
     main.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
@@ -38,6 +39,7 @@ function addwindowSchedule(){
             contextIsolation: false,
         }
     });
+    windowSchedule.maximize();
 
     // ipc.send('load-page', 'file://' + __dirname + '/scheduleWindow.html');
     // main.loadURL("github.com")
