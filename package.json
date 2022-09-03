@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "electron": "^20.0.3"
+    "electron": "^20.0.3",
+    "moment": "^2.29.4"
   }
 }
