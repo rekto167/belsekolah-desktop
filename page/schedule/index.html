@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../src/css/bootstrap.css" />
+    <title>Jadwal</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Halaman Jadwal</h1>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambahJadwal" id="tbhJadwal">Tambah Jadwal</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalTambahJadwal" tabindex="-1" aria-labelledby="modalTambahJadwalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTambahJadwalLabel">Tambah Jadwal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="selectHari">
+                            <option selected>-----Pilih Hari-----</option>
+                        </select>
+                        <label>Pilih Hari</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="selectAktifitas">
+                            <option selected>-----Pilih Aktifitas-----</option>
+                        </select>
+                        <label>Pilih Aktifitas</label>
+                    </div>
+                    <div class="mb-3">
+                        <label>Waktu</label>
+                        <input type="time" class="form-control" id="waktu">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+<!--                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="btnSimpan">Simpan</button>-->
+                    <button type="button" class="btn btn-primary" id="btnSimpan">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../src/js/bootstrap.js"></script>
+    <script>
+        require("./schedule.js");
+    </script>
+</body>
+
+</html>

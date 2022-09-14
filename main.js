@@ -18,7 +18,7 @@ app.on('ready', () => {
     main.maximize();
 
     main.loadURL(url.format({
-        pathname: path.join(__dirname, 'index.html'),
+        pathname: path.join(__dirname, 'page/home/index.html'),
         protocol: 'file:',
         slashes: true
     }));
@@ -45,7 +45,47 @@ function addwindowSchedule(){
     // main.loadURL("github.com")
     windowSchedule.webContents.toggleDevTools();
     windowSchedule.loadURL(url.format({
-        pathname: path.join(__dirname, 'scheduleWindow.html'),
+        pathname: path.join(__dirname, 'page/schedule/index.html'),
+        protocol: 'file',
+        slashes: true
+    }));
+}
+
+function addwindowActivity(){
+    windowSchedule = new BrowserWindow({
+        title: 'Aktifitas',
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+        }
+    });
+    windowSchedule.maximize();
+
+    // ipc.send('load-page', 'file://' + __dirname + '/scheduleWindow.html');
+    // main.loadURL("github.com")
+    windowSchedule.webContents.toggleDevTools();
+    windowSchedule.loadURL(url.format({
+        pathname: path.join(__dirname, 'page/activity/index.html'),
+        protocol: 'file',
+        slashes: true
+    }));
+}
+
+function addwindowBell(){
+    windowSchedule = new BrowserWindow({
+        title: 'Bell',
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+        }
+    });
+    windowSchedule.maximize();
+
+    // ipc.send('load-page', 'file://' + __dirname + '/scheduleWindow.html');
+    // main.loadURL("github.com")
+    windowSchedule.webContents.toggleDevTools();
+    windowSchedule.loadURL(url.format({
+        pathname: path.join(__dirname, 'page/bell/index.html'),
         protocol: 'file',
         slashes: true
     }));
@@ -70,6 +110,18 @@ const mainMenuTemplate = [
         label: 'Jadwal',
         click(){
             addwindowSchedule();
+        }
+    },
+    {
+        label: 'Aktifitas',
+        click(){
+            addwindowActivity();
+        }
+    },
+    {
+        label: 'Bell',
+        click(){
+            addwindowBell();
         }
     }
 ]

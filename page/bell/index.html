@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/css/bootstrap.css">
+    <link rel="stylesheet" href="../../src/bootstrap-icon/bootstrap-icons.css">
+    <title>Bell</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Bell</h3>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambahAktifitas"><i class="bi bi-plus"></i></button>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nama Bell</th>
+                <th scope="col">Audio</th>
+                <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>
+                        <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                        <button class="btn btn-success"><i class="bi bi-pen"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="modalTambahAktifitas" tabindex="-1" aria-labelledby="modalTambahAktifitasLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTambahAktifitasLabel">Tambah Bell</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Contoh: Jam Istirahat Pertama">
+                    <label>Bell</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="file" class="form-control">
+                    <label>Pilih Bell</label>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x"></i></button>
+              <button type="button" class="btn btn-primary"><i class="bi bi-save"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="../../src/js/bootstrap.js"></script>
+    <script>
+        require("./index.js");
+    </script>
+</body>
+</html>
